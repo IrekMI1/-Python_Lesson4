@@ -1,18 +1,5 @@
 # Задана натуральная степень k. Сформировать случайным образом список коэффициентов (значения от 0 до 100) многочлена и записать в файл многочлен степени k.
 
-""" from random import *
-pow = int(input('Введите натуральную степень: '))
-equation = ''
-for i in range(pow, -1, -1):
-    coeff = randint(0, 10)
-    if i not in [0, 1]:
-        equation += f'{coeff}*x^{i} + '
-    elif i == 1:
-        equation += f'{coeff}*x + '
-    else:
-        equation += f'{coeff} = 0'
-print(equation) """
-
 from random import *
 pow = int(input('Введите натуральную степень: '))
 equation = ''
@@ -39,5 +26,5 @@ for i in range(pow, -1, -1):
         else:
             equation = equation[0:len(equation) - 2] + '= 0'
 
-with open('file.txt', 'w') as data:
+with open('file4.txt', 'w') as data:
     data.write(equation)
